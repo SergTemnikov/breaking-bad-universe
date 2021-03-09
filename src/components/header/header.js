@@ -1,23 +1,25 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({home, episodes, chars, quotes, deaths, about}) => {
+
   return (
-    <nav class="bp3-navbar bp3-dark">
+    <nav className="bp3-navbar bp3-dark">
       <div style={{margin: '0 auto', width: 'auto'}}>
-        <div class="bp3-navbar-group bp3-align-left">
-          <div class="bp3-navbar-heading">Breaking Bad Universe</div>
+        <div className="bp3-navbar-group bp3-align-left">
+          <div className="bp3-navbar-heading">Вселенная сериала "Во все тяжкие" (Breaking Bad)</div>
         </div>
-        <div class="bp3-navbar-group bp3-align-right">
-          <button class="bp3-button bp3-minimal bp3-icon-home">Главная страница</button>
-          <span class="bp3-navbar-divider"></span>
-          <button class="bp3-button bp3-minimal bp3-icon-film">Серии</button>
-          <span class="bp3-navbar-divider"></span>
-          <button class="bp3-button bp3-minimal bp3-icon-person">Персонажи</button>
-          <span class="bp3-navbar-divider"></span>
-          <button class="bp3-button bp3-minimal bp3-icon-citation">Цитаты</button>
-          <span class="bp3-navbar-divider"></span>
-          <button class="bp3-button bp3-minimal bp3-icon-blocked-person">Смерти</button>
-          <span class="bp3-navbar-divider"></span>
+        <div className="bp3-navbar-group bp3-align-right">
+          <button className={home}>Главная страница</button>
+          <span className="bp3-navbar-divider"></span>
+          <button className={episodes}>Серии</button>
+          <span className="bp3-navbar-divider"></span>
+          <button className={chars}>Персонажи</button>
+          <span className="bp3-navbar-divider"></span>
+          <button className={quotes}>Цитаты</button>
+          <span className="bp3-navbar-divider"></span>
+          <button className={deaths}>Смерти</button>
+          <span className="bp3-navbar-divider"></span>
+          <button className={about}>О сериале</button>
         </div>
       </div>
     </nav>
