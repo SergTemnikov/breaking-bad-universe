@@ -6,8 +6,6 @@ export default class PageEpisodes extends Component {
 
   getService = new getService()
 
-
-
   render() {
     return (
       <ItemsList 
