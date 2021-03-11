@@ -19,7 +19,6 @@ export default class FetchService {
 
   getAllEpisodes = async () => {
     const res = await this.getResource(`episodes?limit=10`)
-    console.log(res);
     return res.map(this._transformEpisode)
   }
 

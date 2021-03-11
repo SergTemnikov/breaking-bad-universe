@@ -12,9 +12,10 @@ export default class PageEpisodes extends Component {
         getData={this.getService.getAllEpisodes}
         renderItem={({id, title, chars}) => {
           return {
+            head: 'Список серий',
             id: id,
             title: title,
-            data: `Characters: ${chars}`  
+            data: `Персонажи: ${chars}`  
           }
         }}/>
     )

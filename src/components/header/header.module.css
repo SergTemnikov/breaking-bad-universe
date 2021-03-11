@@ -1,5 +1,5 @@
 .link {
-  padding:5px;
+  padding:10px;
 }
 
 a {
@@ -9,5 +9,5 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: aliceblue;
+  color: rgb(67, 116, 77);
 }

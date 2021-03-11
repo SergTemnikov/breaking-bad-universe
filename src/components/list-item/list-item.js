@@ -4,11 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 export default class ListItem extends Component {
   render() {
 
-    const {title} = this.props
-
     return (
-        <div className="card">
-          <div className="card-body">
+        <div style={{margin: '10px'}} className="card">
+          <div className="card-body bg-success text-white">
             {this.props.children}
           </div>
         </div>
