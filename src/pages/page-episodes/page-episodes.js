@@ -10,7 +10,13 @@ export default class PageEpisodes extends Component {
     return (
       <ItemsList 
         getData={this.getService.getAllEpisodes}
-        renderItem={({id, title}) => `${id}:  ${title}`}/>
+        renderItem={({id, title, chars}) => {
+          return {
+            id: id,
+            title: title,
+            data: `Characters: ${chars}`  
+          }
+        }}/>
     )
   }
 }

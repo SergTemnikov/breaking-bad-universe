@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Spinner from '../spinner'
+import ListItem from '../list-item'
 
 export default class ItemsList extends Component {
 
@@ -17,14 +18,15 @@ export default class ItemsList extends Component {
 
   renderItems(arr) {
     return arr.map(item => {
-      const {id} = item
-      const label = this.props.renderItem(item)
+      const {id, title, data} = this.props.renderItem(item)
       return (
-        <li 
-          key={id}
-          style={{cursor: 'pointer', listStyle: 'none'}}>
-            {label}
-        </li>
+          <ListItem 
+            key={id}
+            style={{cursor: 'pointer', listStyle: 'none'}}
+            {...this.props}>
+              <h5 class="card-title">{id}: {title}</h5>
+              <p class="card-text">{data ? data : null}</p>
+          </ListItem>    
       )
     })
   }
@@ -50,9 +52,9 @@ export default class ItemsList extends Component {
 
     const items = this.renderItems(itemsList)
     return (
-      <ul>
+      <div style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column', width: '550px'}}>
         {items}
-      </ul>
+      </div>
     )
   }
 }
