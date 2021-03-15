@@ -1,6 +1,6 @@
 export default class FetchService {
   constructor() {
-    this._apiBase = 'https://www.breakingbadapi.com/api/'
+    this._apiBase = 'https://www.breakingbadapi.com/api'
   }
 
   getResource = async (url) => {
@@ -13,13 +13,18 @@ export default class FetchService {
   }
 
   getAllCharacters = async () => {
-    const res = await this.getResource(`characters?limit=10&offset=10`)
+    const res = await this.getResource(`/characters`)
     return res.map(this._transformChar)
   }
 
   getAllEpisodes = async () => {
-    const res = await this.getResource(`episodes?limit=10`)
+    const res = await this.getResource(`/episodes`)
     return res.map(this._transformEpisode)
+  }
+
+  getAllQuotes = async () => {
+    const res = await this.getResource(`/quotes`)
+    return res.map(this._transformQuote)
   }
 
   _transformChar = (char) => {
@@ -44,5 +49,15 @@ export default class FetchService {
       date: episode.air_date,
       chars: episode.characters 
     }
+  }
+
+  _transformQuote = (quote) => {
+    return {
+      id: quote.quote_id,
+      quote: quote.quote,
+      author: quote.author,
+      episode: quote.series 
+    }
+        
   }
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Spinner from '../spinner'
 import ListItem from '../list-item'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Grid, Image } from 'semantic-ui-react'
 
 export default class ItemsList extends Component {
 
@@ -19,12 +20,13 @@ export default class ItemsList extends Component {
 
   renderItems(arr) {
     return arr.map(item => {
-      const {id, title, data, head} = this.props.renderItem(item)
+      const {id, title, data, avatar} = this.props.renderItem(item)
       return (
           <ListItem 
             key={id}
             style={{cursor: 'pointer', listStyle: 'none'}}
             {...this.props}>
+              <img style={{width: '100px'}} src={avatar ? avatar : null}/>
               <h5 className="card-title">{id}: {title}</h5>
               <p className="card-text">{data ? data : null}</p>
           </ListItem>    
