@@ -27,6 +27,11 @@ export default class FetchService {
     return res.map(this._transformQuote)
   }
 
+  getAllDeaths = async () => {
+    const res = await this.getResource(`/deaths`)
+    return res.map(this._transformDeath)
+  }
+
   _transformChar = (char) => {
     return {
       id: char.char_id,
@@ -57,7 +62,15 @@ export default class FetchService {
       quote: quote.quote,
       author: quote.author,
       episode: quote.series 
+    }      
+  }
+
+  _transformDeath = (death) => {
+    return {
+      id: death.death_id,
+      death: death.death,
+      cause: death.cause,
+      last: death.last_words
     }
-        
   }
 }
