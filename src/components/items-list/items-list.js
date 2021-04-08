@@ -45,7 +45,7 @@ export default class ItemsList extends Component {
     const { head } = this.props.renderItem(itemsList)
 
     return (
-        <div style={{marginTop: '8%'}}>
+        <div>
           <h3 style={{color: 'white', textAlign: 'center'}}>{head ? head : null}</h3>
           {items}
         </div>

@@ -3,14 +3,17 @@ import Header from '../header/header'
 import {Route} from 'react-router-dom'
 import { PageHome, PageEpisodes, 
   PageCharacters, PageQuotes, PageDeaths } from '../../pages'
+import './app.css'
 
 export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <Header />
-        <Route path='/' exact component={PageHome}/>
+        <div className='home'>
+          <Route path='/' exact component={PageHome}/>
+        </div>
         <Route path='/episodes' exact component={PageEpisodes}/>
         <Route path='/characters' exact component={PageCharacters}/>
         <Route path='/quotes' exact component={PageQuotes}/>
