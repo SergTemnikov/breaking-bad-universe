@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import './header.css'
 
-const Header = () => {
+export default class Header extends Component {
 
-  return (
+  addActive = () => {
+    
+  }
+
+  render () {
+    return (
       <div className='header-wrapper'>
         <div className='header'>
           <Link to='/'>ГЛАВНАЯ</Link>
@@ -15,21 +20,7 @@ const Header = () => {
           <Link to='/about'>О СЕРИАЛЕ</Link>
         </div>
       </div>
-  )
+    )
+  }
+  
 }
-
-{/* <div class="ui inverted segment">
-  <div class="ui inverted secondary menu">
-    <a class="active item">
-      Home
-    </a>
-    <a class="item">
-      Messages
-    </a>
-    <a class="item">
-      Friends
-    </a>
-  </div>
-</div> */}
-
-export default Header

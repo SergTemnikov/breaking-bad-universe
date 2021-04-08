@@ -11,9 +11,7 @@ export default class App extends Component {
     return (
       <div className='app'>
         <Header />
-        <div className='home'>
-          <Route path='/' exact component={PageHome}/>
-        </div>
+        <Route path='/' exact component={PageHome}/>
         <Route path='/episodes' exact component={PageEpisodes}/>
         <Route path='/characters' exact component={PageCharacters}/>
         <Route path='/quotes' exact component={PageQuotes}/>
