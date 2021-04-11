@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import './header.css'
 
 export default class Header extends Component {
@@ -12,12 +12,12 @@ export default class Header extends Component {
     return (
       <div className='header-wrapper'>
         <div className='header'>
-          <Link to='/'>ГЛАВНАЯ</Link>
-          <Link to='/episodes'>СЕРИИ</Link>
-          <Link to='/characters'>ПЕРСОНАЖИ</Link>
-          <Link to='/quotes'>ЦИТАТЫ</Link>
-          <Link to='/deaths'>ПОГИБШИЕ</Link>
-          <Link to='/about'>О СЕРИАЛЕ</Link>
+          <NavLink to='/home'>ГЛАВНАЯ</NavLink>
+          <NavLink to='/episodes'>СЕРИИ</NavLink>
+          <NavLink to='/characters'>ПЕРСОНАЖИ</NavLink>
+          <NavLink to='/quotes'>ЦИТАТЫ</NavLink>
+          <NavLink to='/deaths'>ПОГИБШИЕ</NavLink>
+          <NavLink to='/about'>О СЕРИАЛЕ</NavLink>
         </div>
       </div>
     )

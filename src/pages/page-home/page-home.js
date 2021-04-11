@@ -6,9 +6,8 @@ export default class PageHome extends Component {
   render() {
     return (
       <div className='image'>
-        <img src={logo}></img>
+        <img src={logo} alt='logo'></img>
       </div>
-          
     )
   }
 }

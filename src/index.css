@@ -13,4 +13,5 @@ body {
   background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('./images/bg-bb.jpeg');
   background-attachment: fixed;
   font-family: 'Lato', sans-serif;
+  color: rgb(176, 183, 189);
 }
